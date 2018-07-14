@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Idea Box</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto+Slab:400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <h1><span class="title-idea">idea</span><span class="title-box">box</span></h1>
+    <form role="landmark">
+      <input type="text" aria-label="Idea title input" class="input-title" aria-placeholder="Title" placeholder="Title">
+      <textarea aria-multiline="Idea body input" class="input-body" aria-placeholder="Body" placeholder="Body"></textarea>
+      <input type="button" aria-label="Save button" class="save-button" value="save">
+    </form>
+  </header>
+  <main>
+    <input type="search" role="landmark" class="input-search" aria-placeholder="Search" placeholder="Search">
+    <section>
+      <!-- appended items class="idea-box" -->
+    </section>
+  </main>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="script.js"><\/script>')</script>
+  <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
