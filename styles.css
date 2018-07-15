@@ -67,6 +67,10 @@ textarea::placeholder {
   width: 21.25em;
 }
 
+.save-button:hover {
+  background-color: #045E55;
+}
+
 /*MAIN styling*/
 main {
 
