@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+}
+
+/*HEADER styling*/
+header {
+  background-color: #E5F3F2
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+}
+
+.title-idea {
+  color: #00A79D;
+}
+
+.title-box {
+  color: #6D6E71;
+}
+
+form, main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-title,
+.input-body,
+.input-search {
+  border: .125em solid #D1D3D4;
+  color: #D1D3D4;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12pt;
+  font-weight: 600;
+  padding: 0.125em 0.5em;
+  margin-bottom: 1em;
+  width: 20em;
+}
+
+.input-title {
+  height: 2em;
+}
+
+.input-body,
+.input-search {
+  height: 5em;
+  resize: none;
+
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #D1D3D4;
+  font-size: 16pt;
+}
+
+.save-button {
+  background-color: #00A79D;
+  border: none;
+  color: #FFFFFF;
+  font-size: 12pt;
+  height: 2em;
+  margin-bottom: 1em;
+  width: 21.25em;
+}
+
+/*MAIN styling*/
+main {
+
+}
+
+.input-search {
+  font-size: 12pt;
+  width: 21.25em;
+  height: 2.5em;
+  margin-top: 1em;
+}
+
+.idea-box {
+
+}
+
+
+
+
