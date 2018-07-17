@@ -1,3 +1,4 @@
+/* Applied Throughout Webpage */
 body {
   display: grid;
   grid-template-columns: 1fr; 
@@ -17,6 +18,7 @@ header {
   height: 30%;
   min-height: 25rem;
   padding: 1.1rem 1.1rem 1.1rem 1.3rem;
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -35,13 +37,13 @@ h1 {
 }
 
 /* Where user inputs idea */
- 
 form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 35rem;
-  margin-top: 1rem;
+  height: 20rem;
+  width: 60%; 
+  margin: 1rem auto 0 auto;
 }
 
 /*.input-title,
@@ -55,25 +57,25 @@ form {
   padding: 0.125em 0.5em;
   margin-bottom: 1em;
   width: 20em;
-}
-
-/*.input-title {
-  height: 2em;
 }*/
 
-/*.input-body,
+.input-title {
+  height: 2em;
+}
+
+.input-body,
 .input-search {
   height: 5em;
   resize: none;
-}*/
+}
 
-/*input::placeholder,
+input::placeholder,
 textarea::placeholder {
   color: #D1D3D4;
   font-size: 16pt;
-}*/
+}
 
-/*.save-button {
+.save-button {
   background-color: #00A79D;
   border: none;
   color: #FFFFFF;
@@ -81,27 +83,26 @@ textarea::placeholder {
   height: 2em;
   margin-bottom: 1em;
   width: 21.25em;
-}*/
+}
 
 .save-button:hover {
   background-color: #045E55;
 }
 
-/*MAIN styling*/
-/*main {
+/* New Idea Section Styling*/
 
+main {
+  grid-row: 2 / 3;
+  height: 100%;
 }
 
-.input-search {
+input-search {
   font-size: 12pt;
   width: 21.25em;
   height: 2.5em;
   margin-top: 1em;
 }
 
-.idea-box {
-
-}*/
 
 
 
