@@ -14,22 +14,33 @@
       <span class="title-box">box</span>
     </h1>
       <form role="landmark">
-        <input type="text" aria-label="Idea title input" class="js-input-title inputinput-title" aria-placeholder="Title" placeholder="Title">
-        <textarea aria-multiline="Idea body input" class=" js-input-body input-body" aria-placeholder="Body" placeholder="Body"></textarea>
-        <input type="button" aria-label="Save button" class="js-save-button save-button" value="save">
+        <input type="text" aria-label="Idea title input" class="js-input-title input-title form-input" aria-placeholder="Title" placeholder="Title">
+        <textarea aria-multiline="Idea body input" class=" js-input-body input-body form-input" aria-placeholder="Body" placeholder="Body"></textarea>
+        <input type="button" aria-label="Save button" class="js-save-button save-button form-input" value="save">
       </form>
   </header>
   <main>
     <section>
-    <input type="search" role="landmark" class="input-search" aria-placeholder="Search" placeholder="Search">
+    <input type="search" role="landmark" class="input-search form-input" aria-placeholder="Search" placeholder="Search">
       <!-- appended items class="idea-box" -->
-     <!--  <h3>Example Idea 1</h3>
-      <img src="images/delete.svg">
-      <p>Tiramisu carrot cake fruitcake gingerbread bear claw powder icing tootsie roll ice cream.</p>
-      <img src="images/upvote.svg">
-      <img src="images/downvote.svg">
-      <h5>quality: swill</h5> -->
-    </section>
+      <article>
+        <h3>Example Idea 1</h3>
+        <img class="delete-button"src="images/delete.svg">
+        <p>Tiramisu carrot cake fruitcake gingerbread bear claw powder icing tootsie roll ice cream.</p>
+        <img class="vote-buttons"src="images/upvote.svg">
+        <img class="vote-buttons"src="images/downvote.svg">
+        <h5 class="quality">quality: swill</h5>
+      </article>
+      <article>
+        <h3>Example Idea 1</h3>
+        <img class="delete-button"src="images/delete.svg">
+        <p>Tiramisu carrot cake fruitcake gingerbread bear claw powder icing tootsie roll ice cream.</p>
+        <img class="vote-buttons"src="images/upvote.svg">
+        <img class="vote-buttons"src="images/downvote.svg">
+        <h5 class="quality">quality: swill</h5>
+      </article>
+     <!--  </article>
+    </section> -->
   </main>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="script.js"><\/script>')</script>

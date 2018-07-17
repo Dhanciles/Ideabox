@@ -4,7 +4,8 @@ body {
   grid-template-columns: 1fr; 
   grid-template-rows: repeat(2, 1fr); 
   min-height: 25rem; 
-  min-width: 20rem; 
+  min-width: 20rem;
+  margin: 0; 
 }
 
 /*HEADER Styling*/
@@ -41,14 +42,12 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 20rem;
-  width: 60%; 
+  /*height: 20rem;*/
+  /*width: 60%; */
   margin: 1rem auto 0 auto;
 }
 
-/*.input-title,
-.input-body,
-.input-search {
+.form-input {
   border: .125em solid #D1D3D4;
   color: #D1D3D4;
   font-family: "Open Sans", sans-serif;
@@ -57,17 +56,17 @@ form {
   padding: 0.125em 0.5em;
   margin-bottom: 1em;
   width: 20em;
-}*/
+}
 
 .input-title {
   height: 2em;
 }
 
-.input-body,
+/*.input-body,
 .input-search {
   height: 5em;
   resize: none;
-}
+}*/
 
 input::placeholder,
 textarea::placeholder {
@@ -91,17 +90,35 @@ textarea::placeholder {
 
 /* New Idea Section Styling*/
 
-main {
-  grid-row: 2 / 3;
-  height: 100%;
+section {
+  margin-top: 1rem; 
+  text-align: center;
 }
 
-input-search {
-  font-size: 12pt;
-  width: 21.25em;
-  height: 2.5em;
-  margin-top: 1em;
+/* Idea Card */
+article {
+  height: 12rem;
+  margin: 1.5rem auto;
+  border-bottom: 2px solid grey; 
 }
+
+
+/* Idea Buttons */
+.vote-buttons, .delete-button {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: inline-block;
+}
+
+.quality {
+  display: inline-block;
+}
+
+
+
+
+
+
 
 
 
