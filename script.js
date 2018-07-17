@@ -32,3 +32,9 @@ function clearInputs() {
   inputTitle.value = '';
   inputBody.value = ''; 
 }; 
+
+var stringifiedIdea = localStorage.setItems('key', JSON.stringify(newIdea));
+
+var parsedIdea = JSON.parse(localStorage.getItem('key'));
+
+
