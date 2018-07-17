@@ -3,28 +3,29 @@
 <head>
   <title>Idea Box</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto+Slab:400,700" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <header>
     <h1><span class="title-idea">idea</span><span class="title-box">box</span></h1>
     <form role="landmark">
-      <input type="text" aria-label="Idea title input" class="input-title" aria-placeholder="Title" placeholder="Title">
-      <textarea aria-multiline="Idea body input" class="input-body" aria-placeholder="Body" placeholder="Body"></textarea>
-      <input type="button" aria-label="Save button" class="save-button" value="save">
+      <input type="text" aria-label="Idea title input" class="js-input-title inputinput-title" aria-placeholder="Title" placeholder="Title">
+      <textarea aria-multiline="Idea body input" class=" js-input-body input-body" aria-placeholder="Body" placeholder="Body"></textarea>
+      <input type="button" aria-label="Save button" class="js-save-button save-button" value="save">
     </form>
   </header>
   <main>
-    <input type="search" role="landmark" class="input-search" aria-placeholder="Search" placeholder="Search">
     <section>
+    <input type="search" role="landmark" class="input-search" aria-placeholder="Search" placeholder="Search">
       <!-- appended items class="idea-box" -->
-      <h3>Example Idea 1</h3>
+     <!--  <h3>Example Idea 1</h3>
       <img src="images/delete.svg">
       <p>Tiramisu carrot cake fruitcake gingerbread bear claw powder icing tootsie roll ice cream.</p>
       <img src="images/upvote.svg">
       <img src="images/downvote.svg">
-      <h5>quality: swill</h5>
+      <h5>quality: swill</h5> -->
     </section>
   </main>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
