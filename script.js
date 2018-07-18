@@ -14,10 +14,9 @@ function addIdea(event) {
   var newInputBody = inputBody.value.trim();   
   addEventsToArticles(newInputTitle, newInputBody); 
   var newIdea = document.createElement('article');
-  newIdea.setAttribute('class', 'idea-box');
+  // newIdea.setAttribute('class', 'idea-box');
   createIdea(newInputTitle, newInputBody, newIdea);
-  section.appendChild(newIdea); 
-  saveToLocalStorage(newIdea);
+  // saveToLocalStorage(newIdea);
   clearInputs();
 };
 
@@ -27,7 +26,7 @@ function createIdea(newInputTitle, newInputBody, newIdea) {
         <p>${newInputBody}</p>
         <img class="js-upvote vote-buttons"src="images/upvote.svg">
         <img class="js-downvote vote-buttons"src="images/downvote.svg">
-        <h5 class="quality">quality: swill</h5>`
+        <h5 class="js-idea-quality quality">quality: swill</h5>`
 }; 
 
 function clearInputs() {
@@ -42,28 +41,39 @@ function addEventsToArticles(newInputTitle, newInputBody) {
   var upVote = newIdea.querySelector('.js-upvote');
   var downVote = newIdea.querySelector('.js-downvote'); 
   var deleteBtn = newIdea.querySelector('.js-delete-button'); 
+  var ideaQuality = newIdea.querySelector('.js-idea-quality'); 
   upVote.addEventListener('click', function(){
+      if (ideaQuality.innerText === 'quality: swill') {
+      ideaQuality.innerText  = 'quality: plausible';
+    } else if (ideaQuality.innerText === 'quality: plausible') {
+      ideaQuality.innerText = 'quality: genius';
+    }
     console.log('upVote');
-  })
+  });
   downVote.addEventListener('click', function(){
+      if (ideaQuality.innerText === 'quality: genius') {
+      ideaQuality.innerText = 'quality: plausible';
+    } else if (ideaQuality.innerText === 'quality: plausible') {
+      ideaQuality.innerText = 'quality: swill';
+    }
     console.log('downVote');
-  })
+  });
   deleteBtn.addEventListener('click', function() {
     newIdea.remove()
     console.log('delete');
     console.log(this)
     console.log(event.target);  
-  })
+  });
 };
 
-function saveToLocalStorage(newIdea) {
-  console.log(newIdea)
-  var stringifiedIdea = localStorage.setItems('savedIdea', JSON.stringify(newIdea));
-}
+// function saveToLocalStorage(newIdea) {
+//   console.log(newIdea)
+//   var stringifiedIdea = localStorage.setItems('savedIdea', JSON.stringify(newIdea));
+// }
 
-function retrieveFromLocalStrorage() {
-  console.log()
-  var parsedIdea = JSON.parse(localStorage.getItem('key'));
-}
+// function retrieveFromLocalStrorage() {
+//   console.log()
+//   var parsedIdea = JSON.parse(localStorage.getItem('key'));
+// }
 
 
