@@ -6,29 +6,46 @@ var section = document.querySelector('.js-section');
 
 // Event Listeners 
 submitBtn.addEventListener('click', addIdea);
-console.log(submitBtn);  
-
+ 
 // Functions 
 function addIdea(event) {
   event.preventDefault(); 
   var newInputTitle = inputTitle.value.trim(); 
-  var newInputBody = inputBody.value.trim(); 
-  var newIdea = document.createElement('article');
-  createIdea(newInputTitle, newInputBody, newIdea);
-  section.appendChild(newIdea); 
+  var newInputBody = inputBody.value.trim();   
+  addEventsToArticles(newInputTitle, newInputBody); 
   clearInputs(); 
 };
 
 function createIdea(newInputTitle, newInputBody, newIdea) {
   newIdea.innerHTML = `<h3>${newInputTitle}</h3>
-        <img class="delete-button"src="images/delete.svg">
+        <img class="js-delete-button delete-button"src="images/delete.svg">
         <p>${newInputBody}</p>
-        <img class="vote-buttons"src="images/upvote.svg">
-        <img class="vote-buttons"src="images/downvote.svg">
+        <img class="js-upvote vote-buttons"src="images/upvote.svg">
+        <img class="js-downvote vote-buttons"src="images/downvote.svg">
         <h5 class="quality">quality: swill</h5>`
 }; 
 
 function clearInputs() {
   inputTitle.value = '';
   inputBody.value = ''; 
-}; 
+};
+
+function addEventsToArticles(newInputTitle, newInputBody) { 
+  var newIdea = document.createElement('article');
+  createIdea(newInputTitle, newInputBody, newIdea); 
+  section.appendChild(newIdea);
+  var upVote = newIdea.querySelector('.js-upvote');
+  var downVote = newIdea.querySelector('.js-downvote'); 
+  var deleteBtn = newIdea.querySelector('.js-delete-button'); 
+  upVote.addEventListener('click', function(){
+    console.log('upVote');
+  })
+  downVote.addEventListener('click', function(){
+    console.log('downVote');
+  })
+  deleteBtn.addEventListener('click', function() {
+    console.log('delete'); 
+  })
+}
+
+
