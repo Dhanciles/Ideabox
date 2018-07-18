@@ -14,9 +14,12 @@ function addIdea(event) {
   var newInputTitle = inputTitle.value.trim(); 
   var newInputBody = inputBody.value.trim(); 
   var newIdea = document.createElement('article');
+  newIdea.setAttribute('class', 'idea-box');
   createIdea(newInputTitle, newInputBody, newIdea);
   section.appendChild(newIdea); 
-  clearInputs(); 
+  saveToLocalStorage(newIdea);
+  clearInputs();
+
 };
 
 function createIdea(newInputTitle, newInputBody, newIdea) {
@@ -33,7 +36,13 @@ function clearInputs() {
   inputBody.value = ''; 
 }; 
 
-var stringifiedIdea = localStorage.setItems('key', JSON.stringify(newIdea));
+function saveToLocalStorage(newIdea) {
+  console.log(newIdea)
+
+  var stringifiedIdea = localStorage.setItems('savedIdea', JSON.stringify(newIdea));
+}
+
+
 
 var parsedIdea = JSON.parse(localStorage.getItem('key'));
 
