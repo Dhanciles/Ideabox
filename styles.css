@@ -1,27 +1,29 @@
 /* Applied Throughout Webpage */
 body {
+  margin: 0; 
+}
+
+.wrapper {
   display: grid;
   grid-template-columns: 1fr; 
   grid-template-rows: repeat(2, 1fr); 
   min-height: 25rem; 
   min-width: 20rem;
-  margin: 0; 
 }
 
 /*HEADER Styling*/
 header {
-  grid-column: 1 / 2; 
-  grid-row: 1 / 2;
+  grid-area: 1 / 1 / 2 / 2; 
   background-color: #E5F3F2; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 30%;
-  min-height: 25rem;
-  padding: 1.1rem 1.1rem 1.1rem 1.3rem;
-  margin: 0 auto;
+  min-height: 20rem;
+  /*padding: 1.1rem 1.1rem 1.1rem 1.3rem;*/
   width: 100%;
 }
+
 
 h1 {
   font-family: 'Roboto Slab', serif;  
@@ -37,13 +39,12 @@ h1 {
   color: #6D6E71;
 }
 
-/* Where user inputs idea */
 form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   /*height: 20rem;*/
-  /*width: 60%; */
+  width: 50%; 
   margin: 1rem auto 0 auto;
 }
 
@@ -55,18 +56,18 @@ form {
   font-weight: 600;
   padding: 0.125em 0.5em;
   margin-bottom: 1em;
-  width: 20em;
+  width: 96%;
 }
 
 .input-title {
   height: 2em;
 }
 
-/*.input-body,
+.input-body,
 .input-search {
-  height: 5em;
+  /*height: 5em;*/
   resize: none;
-}*/
+}
 
 input::placeholder,
 textarea::placeholder {
@@ -81,25 +82,39 @@ textarea::placeholder {
   font-size: 12pt;
   height: 2em;
   margin-bottom: 1em;
-  width: 21.25em;
+  width: 98.75%;
 }
 
 .save-button:hover {
   background-color: #045E55;
 }
 
-/* New Idea Section Styling*/
+/*MAIN Styling*/
+
+.input-search {
+  font-size: 12pt;
+  width: 50%;
+  height: 2.5em;
+  margin-top: 1em;
+  box-sizing: border-box;
+}
 
 section {
   margin-top: 1rem; 
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Idea Card */
 article {
-  height: 12rem;
-  margin: 1.5rem auto;
-  border-bottom: 2px solid grey; 
+  height: 11rem;
+  margin: 1rem auto;
+  border-bottom: 1px solid #939598; 
+  justify-content: center;
+  align-items: center;
+  width: 50%;
 }
 
 
@@ -107,12 +122,67 @@ article {
 .vote-buttons, .delete-button {
   height: 1.5rem;
   width: 1.5rem;
-  display: inline-block;
+  /*display: inline-block;*/
 }
 
-.quality {
-  display: inline-block;
+.delete-button:hover .delete-hover {
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
 }
+
+h2, 
+p,
+.quality {
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.title-container,
+.vote-container,
+.quality-description {
+  color: #6D6E71;
+}
+
+.title-container,
+.vote-container {
+  font-family: 'Roboto Slab', serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-container {
+  
+}
+
+p,
+.quality-description {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  color: #939598;
+  font-size: 14pt;
+}
+
+.vote-container {
+  width: 12vw;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (min-width: 1090px) {
+  .vote-container {
+    width: 30%;
+  }
+}
+
+
+
+
 
 
 
