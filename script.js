@@ -5,7 +5,7 @@ var saveBtn = document.querySelector('.js-save-button');
 var section = document.querySelector('.js-section'); 
 
 // Event Listeners 
-saveBtn.addEventListener('click', addIdea);
+saveBtn.addEventListener('click', checkInputs);
 inputBody.addEventListener('input', enableSaveButton); 
 inputTitle.addEventListener('input', enableSaveButton); 
 
@@ -13,14 +13,24 @@ inputTitle.addEventListener('input', enableSaveButton);
 // Functions 
 function enableSaveButton() {
   saveBtn.removeAttribute('disabled'); 
-}
+};    
 
 function disableSaveButton() {
   saveBtn.setAttribute('disabled', ''); 
-}
+}; 
 
-function addIdea(event) {
+function checkInputs(event) {
   event.preventDefault(); 
+  if (!inputTitle.value) {
+    alert ('Please enter a title for your idea.'); 
+  } else if (!inputBody.value) {
+    alert ('Please enter content into the body text area.'); 
+  } else {
+    addIdea(); 
+  }
+}; 
+
+function addIdea() {
   var newInputTitle = inputTitle.value.trim(); 
   var newInputBody = inputBody.value.trim();   
   addEventsToArticles(newInputTitle, newInputBody); 
