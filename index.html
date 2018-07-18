@@ -7,34 +7,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <header>
-    <h1>
-      <span class="title-idea">idea<span>
-      <span class="title-box">box</span>
-    </h1>
-      <form role="landmark">
-        <input type="text" aria-label="Idea title input" class="js-input-title input-title form-input" aria-placeholder="Title" placeholder="Title">
-        <textarea aria-multiline="Idea body input" class=" js-input-body input-body form-input" aria-placeholder="Body" placeholder="Body"></textarea>
-        <input type="button" aria-label="Save button" class="js-save-button save-button form-input" value="save">
-      </form>
-  </header>
-  <main>
-    <section class="js-section">
-    <input type="search" role="landmark" class="input-search form-input" aria-placeholder="Search" placeholder="Search">
-      <!-- appended items class="idea-box" -->
-     <!--  <article>
-        <h3>Example Idea 1</h3>
-        <img class="delete-button"src="images/delete.svg">
-        <p>Tiramisu carrot cake fruitcake gingerbread bear claw powder icing tootsie roll ice cream.</p>
-        <img class="vote-buttons"src="images/upvote.svg">
-        <img class="vote-buttons"src="images/downvote.svg">
-        <h5 class="quality">quality: swill</h5>
-      </article> -->
-     <!--  </article>
-    </section> -->
-  </main>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="script.js"><\/script>')</script>
-  <script src="script.js" type="text/javascript"></script>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <span class="title-idea">idea<span><span class="title-box">box</span>
+      </h1>
+        <form role="landmark">
+          <input type="text" aria-label="Idea title input" class="js-input-title input-title form-input" aria-placeholder="Title" placeholder="Title">
+          <textarea aria-multiline="Idea body input" class=" js-input-body input-body form-input" aria-placeholder="Body" placeholder="Body"></textarea>
+          <input type="button" aria-label="Save button" class="js-save-button save-button form-input" value="save">
+        </form>
+    </header>
+    <main>
+      <section class="js-section">
+        <input type="search" role="landmark" class="input-search form-input" aria-placeholder="Search" placeholder="Search">
+        <!-- appended items class="idea-box" -->
+        <article class="idea-box">
+          <div class="title-container">
+            <h2>Example Idea 1</h2>
+            <img class="delete-button"src="images/delete.svg">
+            <!-- <img class="delete-hover"src="images/delete-hover.svg"> -->
+          </div>
+          <p>Tiramisu carrot cake fruitcake gingerbread bear claw powder icing tootsie roll ice cream.</p>
+          <div class="vote-container">
+            <img class="vote-buttons"src="images/upvote.svg">
+            <img class="vote-buttons"src="images/downvote.svg">
+            <h5 class="quality">quality: <span class="quality-description">swill</span></h5>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="script.js"><\/script>')</script>
+    <script src="script.js" type="text/javascript"></script>
+  </div>
 </body>
 </html>

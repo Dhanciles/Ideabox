@@ -13,7 +13,12 @@ function addIdea(event) {
   var newInputTitle = inputTitle.value.trim(); 
   var newInputBody = inputBody.value.trim();   
   addEventsToArticles(newInputTitle, newInputBody); 
-  clearInputs(); 
+  var newIdea = document.createElement('article');
+  newIdea.setAttribute('class', 'idea-box');
+  createIdea(newInputTitle, newInputBody, newIdea);
+  section.appendChild(newIdea); 
+  saveToLocalStorage(newIdea);
+  clearInputs();
 };
 
 function createIdea(newInputTitle, newInputBody, newIdea) {
@@ -49,6 +54,4 @@ function addEventsToArticles(newInputTitle, newInputBody) {
     console.log(this)
     console.log(event.target);  
   })
-}
-
-
+};
