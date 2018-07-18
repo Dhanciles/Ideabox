@@ -21,13 +21,18 @@ function addIdea(event) {
 };
 
 function createIdea(newInputTitle, newInputBody, newIdea) {
-  newIdea.innerHTML = `<h3>${newInputTitle}</h3>
-        <img class="js-delete-button delete-button"src="images/delete.svg">
+  newIdea.innerHTML = 
+        `<div class="title-container">
+          <h2>${newInputTitle}</h2>
+          <img class="js-delete-button delete-button"src="images/delete.svg">
+        </div>
         <p>${newInputBody}</p>
-        <img class="js-upvote vote-buttons"src="images/upvote.svg">
-        <img class="js-downvote vote-buttons"src="images/downvote.svg">
-        <h5 class="js-idea-quality quality">quality: swill</h5>`
-}; 
+        <div class="vote-container">
+          <img class="js-upvote vote-buttons"src="images/upvote.svg">
+          <img class="js-downvote vote-buttons"src="images/downvote.svg">
+          <h5 class="js-idea-quality quality">quality: swill</h5>
+        </div>`
+};
 
 function clearInputs() {
   inputTitle.value = '';
