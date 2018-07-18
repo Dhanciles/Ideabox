@@ -18,7 +18,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 30%;
+  height: 20rem;
   min-height: 20rem;
   /*padding: 1.1rem 1.1rem 1.1rem 1.3rem;*/
   width: 100%;
@@ -43,7 +43,6 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /*height: 20rem;*/
   width: 50%; 
   margin: 1rem auto 0 auto;
 }

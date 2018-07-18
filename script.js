@@ -1,13 +1,24 @@
 // Global Variables 
 var inputTitle = document.querySelector('.js-input-title'); 
 var inputBody = document.querySelector('.js-input-body'); 
-var submitBtn = document.querySelector('.js-save-button'); 
+var saveBtn = document.querySelector('.js-save-button'); 
 var section = document.querySelector('.js-section'); 
 
 // Event Listeners 
-submitBtn.addEventListener('click', addIdea);
+saveBtn.addEventListener('click', addIdea);
+inputBody.addEventListener('input', enableSaveButton); 
+inputTitle.addEventListener('input', enableSaveButton); 
+
  
 // Functions 
+function enableSaveButton() {
+  saveBtn.removeAttribute('disabled'); 
+}
+
+function disableSaveButton() {
+  saveBtn.setAttribute('disabled', ''); 
+}
+
 function addIdea(event) {
   event.preventDefault(); 
   var newInputTitle = inputTitle.value.trim(); 
@@ -18,6 +29,7 @@ function addIdea(event) {
   createIdea(newInputTitle, newInputBody, newIdea);
   // saveToLocalStorage(newIdea);
   clearInputs();
+  disableSaveButton(); 
 };
 
 function createIdea(newInputTitle, newInputBody, newIdea) {
@@ -38,6 +50,8 @@ function clearInputs() {
   inputTitle.value = '';
   inputBody.value = ''; 
 };
+
+
 
 function addEventsToArticles(newInputTitle, newInputBody) { 
   var newIdea = document.createElement('article');
