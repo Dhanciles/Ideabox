@@ -44,7 +44,10 @@ function addEventsToArticles(newInputTitle, newInputBody) {
     console.log('downVote');
   })
   deleteBtn.addEventListener('click', function() {
-    console.log('delete'); 
+    newIdea.remove()
+    console.log('delete');
+    console.log(this)
+    console.log(event.target);  
   })
 }
 
