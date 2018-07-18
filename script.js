@@ -55,3 +55,15 @@ function addEventsToArticles(newInputTitle, newInputBody) {
     console.log(event.target);  
   })
 };
+
+function saveToLocalStorage(newIdea) {
+  console.log(newIdea)
+  var stringifiedIdea = localStorage.setItems('savedIdea', JSON.stringify(newIdea));
+}
+
+function retrieveFromLocalStrorage() {
+  console.log()
+  var parsedIdea = JSON.parse(localStorage.getItem('key'));
+}
+
+
