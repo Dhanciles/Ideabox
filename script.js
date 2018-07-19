@@ -35,9 +35,7 @@ function addIdea() {
   var newInputBody = inputBody.value.trim();   
   addEventsToArticles(newInputTitle, newInputBody); 
   var newIdea = document.createElement('article');
-  // newIdea.setAttribute('class', 'idea-box');
   createIdea(newInputTitle, newInputBody, newIdea);
-  // saveToLocalStorage(newIdea);
   clearInputs();
   disableSaveButton(); 
 };
@@ -45,10 +43,10 @@ function addIdea() {
 function createIdea(newInputTitle, newInputBody, newIdea) {
   newIdea.innerHTML = 
         `<div class="title-container">
-          <h2>${newInputTitle}</h2>
+          <h2 contenteditable>${newInputTitle}</h2>
           <img class="js-delete-button delete-button"src="images/delete.svg">
         </div>
-        <p>${newInputBody}</p>
+        <p contenteditable>${newInputBody}</p>
         <div class="vote-container">
           <img class="js-upvote vote-buttons"src="images/upvote.svg">
           <img class="js-downvote vote-buttons"src="images/downvote.svg">
@@ -60,8 +58,6 @@ function clearInputs() {
   inputTitle.value = '';
   inputBody.value = ''; 
 };
-
-
 
 function addEventsToArticles(newInputTitle, newInputBody) { 
   var newIdea = document.createElement('article');
@@ -77,7 +73,7 @@ function addEventsToArticles(newInputTitle, newInputBody) {
     } else if (ideaQuality.innerText === 'quality: plausible') {
       ideaQuality.innerText = 'quality: genius';
     }
-    console.log('upVote');
+
   });
   downVote.addEventListener('click', function(){
       if (ideaQuality.innerText === 'quality: genius') {
@@ -88,21 +84,6 @@ function addEventsToArticles(newInputTitle, newInputBody) {
     console.log('downVote');
   });
   deleteBtn.addEventListener('click', function() {
-    newIdea.remove()
-    console.log('delete');
-    console.log(this)
-    console.log(event.target);  
+    newIdea.remove(); 
   });
 };
-
-// function saveToLocalStorage(newIdea) {
-//   console.log(newIdea)
-//   var stringifiedIdea = localStorage.setItems('savedIdea', JSON.stringify(newIdea));
-// }
-
-// function retrieveFromLocalStrorage() {
-//   console.log()
-//   var parsedIdea = JSON.parse(localStorage.getItem('key'));
-// }
-
-
