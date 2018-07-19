@@ -36,6 +36,7 @@ function addIdea() {
   addEventsToArticles(newInputTitle, newInputBody); 
   var newIdea = document.createElement('article');
   createIdea(newInputTitle, newInputBody, newIdea);
+  addToLocalStorage(newIdea); 
   clearInputs();
   disableSaveButton(); 
 };
@@ -61,6 +62,7 @@ function clearInputs() {
 
 function addEventsToArticles(newInputTitle, newInputBody) { 
   var newIdea = document.createElement('article');
+  newIdea.dataset.ideaKey = 'idea'; 
   createIdea(newInputTitle, newInputBody, newIdea); 
   section.appendChild(newIdea);
   var upVote = newIdea.querySelector('.js-upvote');
@@ -81,9 +83,17 @@ function addEventsToArticles(newInputTitle, newInputBody) {
     } else if (ideaQuality.innerText === 'quality: plausible') {
       ideaQuality.innerText = 'quality: swill';
     }
-    console.log('downVote');
   });
+
   deleteBtn.addEventListener('click', function() {
     newIdea.remove(); 
   });
 };
+
+function addToLocalStorage(newIdea) {
+  var ideaObject = {title: this.title, body: this.body, quality: this.quality}; 
+  var stringifiedIdea = JSON.stringify(ideaObject); 
+  localStorage.setItem('idea', stringifiedIdea); 
+  console.log(stringifiedIdea); 
+}; 
+
